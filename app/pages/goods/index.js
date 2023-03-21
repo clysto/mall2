@@ -11,7 +11,6 @@ Page({
     show: false,
     goodsItem: [],
     totalPrice: 0.00,
-    checked: [],
     totalGoodsCount: 0
   },
 
@@ -29,8 +28,10 @@ Page({
   },
 
   // 增加商品数量
-  addGoods() {
+  async addGoods() {
     this.setData({goodsCount: 1})
+    this.addToCart();
+    await this.loadCartInfo();
   },
 
   // 当进步器改变时，修改商品数量
@@ -46,6 +47,7 @@ Page({
       goodsCount: this.data.goodsCount,
       openId: wx.getStorageSync('openId')
     })
+    await this.loadCartInfo()
   },
 
   // 展示购物车
@@ -55,17 +57,13 @@ Page({
     } else {
       this.setData({ show: true });
     }
-    console.log(this.data.show);
   },
 
-  // 生命周期函数--监听页面显示
-  async onShow() {
-    // 获取购物车信息
+  async loadCartInfo() {
     let res = await http.GET('/cart/info', {openId: wx.getStorageSync('openId')})
     this.setData({
       goodsItem: res.data.data.cartItem,
       totalPrice: res.data.data.totalPrice,
-      goodsCount: this.data.goodsItem[this.data.goodsId]
     })
     let totalGoodsCount = 0
     for (let i = 0; i < this.data.goodsItem.length; i++) {
@@ -78,11 +76,17 @@ Page({
     this.setData({totalGoodsCount: totalGoodsCount})
   },
 
+  // 生命周期函数--监听页面显示
+  async onShow() {
+    await this.loadCartInfo()
+  },
+
   // 清空购物车
   async clearCart(){
     await http.DELETE('/cart/clear',{ 
       openId: wx.getStorageSync('openId')
     })
+    await this.loadCartInfo();
   },
   
   // 购物车选中

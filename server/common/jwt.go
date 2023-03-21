@@ -1,9 +1,10 @@
 package common
 
 import (
-	"github.com/golang-jwt/jwt"
 	"mall/global"
 	"time"
+
+	"github.com/golang-jwt/jwt"
 )
 
 var SigningKey = []byte(global.Config.Jwt.SigningKey)

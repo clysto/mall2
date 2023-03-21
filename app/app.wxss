@@ -8,3 +8,11 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.cart_button {
+  background-image: linear-gradient(to right, #2a7c53 , #59886d) !important;
+}
+
+.goods_plus_icon {
+  background-color: #2a7c53 !important;
+}

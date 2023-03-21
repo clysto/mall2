@@ -38,7 +38,6 @@ Page({
 
   // 点击banner
   onClickBanner(event){
-    console.log("========")
     wx.navigateTo({ url: '/pages/goods/index?id=' + event.currentTarget.id})
   },
   
@@ -99,7 +98,6 @@ Page({
     this.setData({
       goodsItem: res.data.data.cartItem,
       totalPrice: res.data.data.totalPrice,
-      goodsCount: this.data.goodsItem[this.data.goodsId]
     })
     let totalGoodsCount = 0
     let checkedGoods = []

@@ -100,8 +100,8 @@ page{
   background: none !important;
   width: 45rpx !important;
   height: 45rpx !important;
-  color: #12CAFF !important;
-  border: 2rpx solid #12CAFF !important;
+  color: #2a7c53 !important;
+  border: 2rpx solid #2a7c53 !important;
   border-radius: 50rpx !important;
 }
 .goods_van_stepper_input{
@@ -110,7 +110,7 @@ page{
 .goods_van_stepper_plus{
   width: 45rpx !important;
   height: 45rpx !important;
-  background-color: #12CAFF !important;
+  background-color: #2a7c53 !important;
   color: white !important;
   border-radius: 50rpx !important;
 }

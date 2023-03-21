@@ -48,7 +48,16 @@ Page({
       title: '确认取消订单吗'
     }).then(() => {
       _this.cancelOrder(event)
-      _this.getOrderList()
+      _this.getOrderList(0)
     });
+  },
+
+  async confirmPayOrder(event) {
+    let res = await http.PUT('/order/update',{
+      id: event.currentTarget.id,
+      status: 3
+    });
+    await this.getOrderList(0)
   }
+
 })

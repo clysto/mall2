@@ -13,6 +13,10 @@ Page({
     this.searchGoods()
   },
 
+  checkGoodsDetail(event){
+    wx.navigateTo({ url: '/pages/goods/index?id=' + event.currentTarget.id })
+  },
+
   // 绑定输入框的值
   onChange(e) {
     this.setData({ keyWord: e.detail});

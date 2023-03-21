@@ -28,7 +28,7 @@ func (c *AppCartService) Clear(param app.CartClearParam) int64 {
 	key := strings.Join([]string{"user", param.OpenId, "cart"}, ":")
 	pidsAndCounts := global.Rdb.HGetAll(ctx, key).Val()
 	var rows int64
-	for id, _ := range pidsAndCounts {
+	for id := range pidsAndCounts {
 		rows += global.Rdb.HDel(ctx, key, id).Val()
 	}
 	return rows
@@ -37,6 +37,7 @@ func (c *AppCartService) Clear(param app.CartClearParam) int64 {
 // 获取购物车信息
 func (c *AppCartService) GetInfo(param app.CartQueryParam) app.CartInfo {
 	var cartInfo app.CartInfo
+	cartInfo.CartItem = make([]app.CartItem, 0)
 	// 从缓存中获取加购商品与数量
 	key := strings.Join([]string{"user", param.OpenId, "cart"}, ":")
 	goodsIdsAndCounts := global.Rdb.HGetAll(ctx, key).Val()

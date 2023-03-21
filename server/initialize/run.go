@@ -1,6 +1,6 @@
 package initialize
 
-func Run()  {
+func Run() {
 	LoadConfig()
 	Mysql()
 	Redis()

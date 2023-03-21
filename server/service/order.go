@@ -167,7 +167,7 @@ func (o *AppOrderService) Submit(param app.OrderSubmitParam) int64 {
 	if rowsAffected > 0 {
 		// 清空购物车信息
 		goodsIdsAndCounts := global.Rdb.HGetAll(ctx, key).Val()
-		for id, _ := range goodsIdsAndCounts {
+		for id := range goodsIdsAndCounts {
 			global.Rdb.HDel(ctx, key, id).Val()
 		}
 	}

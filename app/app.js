@@ -7,7 +7,7 @@ App({
       async success (res) {
         if (res.code) {
           let response = await http.POST('/login',{ 
-            code: res.code 
+            code: res.code
           })
           wx.setStorageSync('openId', response.data.data.openId);
         }

@@ -48,8 +48,8 @@ func (u *AppUserService) Login(code string) *app.UserInfo {
 		// 不存在，添加用户
 		fmt.Println(acsJson.OpenId)
 		user := app.User{
-			OpenId: acsJson.OpenId,
-			Status: 1,
+			OpenId:  acsJson.OpenId,
+			Status:  1,
 			Created: common.NowTime(),
 		}
 		row := global.Db.Create(&user).RowsAffected
