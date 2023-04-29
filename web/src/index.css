@@ -3,7 +3,7 @@
 :root {
   --el-color-white: #ffffff;
   --el-color-black: #000000;
-  --el-color-primary-rgb: 255, 64, 102;
+  --el-color-primary-rgb: 30, 142, 63;
   --el-color-success-rgb: 103, 194, 58;
   --el-color-warning-rgb: 230, 162, 60;
   --el-color-danger-rgb: 245, 108, 108;
@@ -15,8 +15,7 @@
   --el-font-size-base: 14px;
   --el-font-size-small: 13px;
   --el-font-size-extra-small: 12px;
-  --el-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
-    sans-serif;
+  --el-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
   --el-font-weight-primary: 500;
   --el-font-line-height-primary: 24px;
   --el-index-normal: 1;
@@ -32,13 +31,10 @@
   --el-transition-function-fast-bezier: cubic-bezier(0.23, 1, 0.32, 1);
   --el-transition-all: all var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier);
   --el-transition-fade: opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
-  --el-transition-md-fade: transform var(--el-transition-duration) var(--el-transition-function-fast-bezier),
-    opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
+  --el-transition-md-fade: transform var(--el-transition-duration) var(--el-transition-function-fast-bezier), opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
   --el-transition-fade-linear: opacity var(--el-transition-duration-fast) linear;
-  --el-transition-border: border-color var(--el-transition-duration-fast)
-    var(--el-transition-function-ease-in-out-bezier);
-  --el-transition-box-shadow: box-shadow var(--el-transition-duration-fast)
-    var(--el-transition-function-ease-in-out-bezier);
+  --el-transition-border: border-color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
+  --el-transition-box-shadow: box-shadow var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
   --el-transition-color: color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
   --el-component-size-large: 40px;
   --el-component-size: 32px;
@@ -49,13 +45,13 @@
   color-scheme: light;
   --el-color-white: #ffffff;
   --el-color-black: #000000;
-  --el-color-primary: #ff4066;
-  --el-color-primary-light-3: #ff7994;
-  --el-color-primary-light-5: #ffa0b3;
-  --el-color-primary-light-7: #ffc6d1;
-  --el-color-primary-light-8: #ffd9e0;
-  --el-color-primary-light-9: #ffecf0;
-  --el-color-primary-dark-2: #cc3352;
+  --el-color-primary: #1e8e3f;
+  --el-color-primary-light-3: #62b079;
+  --el-color-primary-light-5: #8fc79f;
+  --el-color-primary-light-7: #bcddc5;
+  --el-color-primary-light-8: #d2e8d9;
+  --el-color-primary-light-9: #e9f4ec;
+  --el-color-primary-dark-2: #187232;
   --el-color-success: #67c23a;
   --el-color-success-light-3: #95d475;
   --el-color-success-light-5: #b3e19d;
@@ -115,8 +111,7 @@
   --el-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08);
   --el-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12);
   --el-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.12);
-  --el-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12),
-    0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+  --el-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12), 0px 8px 16px -8px rgba(0, 0, 0, 0.16);
   --el-disabled-bg-color: var(--el-fill-color-light);
   --el-disabled-text-color: var(--el-text-color-placeholder);
   --el-disabled-border-color: var(--el-border-color-light);

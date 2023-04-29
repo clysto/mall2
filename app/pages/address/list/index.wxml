@@ -6,7 +6,7 @@
       </view>
       <view slot="label" class="cell_label">
         <view>
-          <van-tag color="#2a7c53" wx:if="{{item.isDefault === 1}}" text-color="#fff">默认</van-tag>{{' ' + item.province + ' ' + item.city + ' ' + item.district + ' ' + item.detailedAddress}}
+          <van-tag color="#12CAFF" wx:if="{{item.isDefault === 1}}" text-color="#fff">默认</van-tag>{{' ' + item.province + ' ' + item.city + ' ' + item.district + ' ' + item.detailedAddress}}
         </view>
       </view>
       <view style="padding: 10rpx 24rpx;">
@@ -16,7 +16,7 @@
   <view slot="right" id="{{item.id}}" bindtap="onClickDelete">删除</view>
 </van-swipe-cell>
 <view class="footer_button">
-  <van-button custom-class="custom_button" bindtap="toAddForm" icon="plus" color="#2a7c53" round>新建收货地址</van-button>
+  <van-button custom-class="custom_button" bindtap="toAddForm" icon="plus" color="#12CAFF" round>新建收货地址</van-button>
 </view>
 <View style="margin-top: 300rpx;">
   <van-empty wx:if="{{showEmpty}}" description="您还没有添加地址哦" />
